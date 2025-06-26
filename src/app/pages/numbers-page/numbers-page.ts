@@ -1,16 +1,13 @@
-import { CommonModule, TitleCasePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-numbers-page',
-  imports: [CommonModule, TitleCasePipe],
+  imports: [CommonModule],
   templateUrl: './numbers-page.html',
   styleUrl: './numbers-page.css'
 })
 export default class NumbersPage {
-  nameLower = signal<string>('juan manuel')
-  nameUpper = signal<string>('JUAN MANUEL')
-  fullName = signal<string>('juAN mAnUel')
 
 
   totalSells = signal<number>(22312421334.5567)

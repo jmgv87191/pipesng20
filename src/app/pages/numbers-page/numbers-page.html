@@ -5,30 +5,30 @@
 
 
 <div class="stats shadow stats-vertical lg:stats-horizontal w-full">
+    
     <div class="stat">
-        <div class="stat-figure text-secondary">
-        
-        </div>
-        <div class="stat-title">Lowercase Pipe</div>
-        <div class="stat-value"> {{ nameUpper() | lowercase }} </div>
-        <div class="stat-desc">{{nameUpper()}}</div>
+        <div class="stat-title">Number: '1.2-2'</div>
+        <div class="stat-value"> {{ totalSells() | number: "1.2-2" }} </div>
+        <div class="stat-desc">{{totalSells()}}</div>
     </div>
 
     <div class="stat">
-        <div class="stat-figure text-secondary">
-
-        </div>
-        <div class="stat-title">Uppercase Pipe</div>
-        <div class="stat-value"> {{ nameLower() | uppercase }} </div>
-        <div class="stat-desc"> {{ nameLower() }} </div>
+        <div class="stat-title">Number: '1.1-2'</div>
+        <div class="stat-value"> {{ totalSells() + 1234 | number: "1.1-2" }} </div>
+        <div class="stat-desc">{{totalSells()}}</div>
     </div>
 
     <div class="stat">
-        <div class="stat-figure text-secondary">
-
-        </div>
-        <div class="stat-title"> TitleCase Pipe </div>
-        <div class="stat-value"> {{ fullName() | titlecase  }} </div>
-        <div class="stat-desc"> {{ fullName() }} </div>
+        <div class="stat-title">Currency</div>
+        <div class="stat-value"> {{ totalSells()  | currency: "CAD" : "symbol-narrow" : "1.2-4" }} </div>
+        <div class="stat-desc">{{totalSells()}}</div>
     </div>
+
+    <div class="stat">
+        <div class="stat-title">Percent</div>
+        <div class="stat-value"> {{ percent() | percent : "1.2-2"  }} </div>
+        <div class="stat-desc">{{percent()}}</div>
+    </div>
+
+
 </div>
