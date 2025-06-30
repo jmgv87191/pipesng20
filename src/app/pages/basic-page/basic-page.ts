@@ -1,5 +1,6 @@
 import { CommonModule, TitleCasePipe } from '@angular/common';
-import { Component, effect, OnInit, signal } from '@angular/core';
+import { Component, effect, inject, LOCALE_ID, OnInit, signal } from '@angular/core';
+import { AviableLocal, Local } from '../../services/local';
 
 @Component({
   selector: 'app-basic-page',
@@ -9,6 +10,8 @@ import { Component, effect, OnInit, signal } from '@angular/core';
 })
 export default class BasicPage  {
 
+  localService = inject(Local)
+  currentLocale = signal (inject(LOCALE_ID))
 
 
   nameLower = signal<string>('juan manuel')
@@ -26,4 +29,11 @@ export default class BasicPage  {
         clearInterval(interval)
       })
   })
+
+
+  changeLocale(locale: AviableLocal){
+    console.log(locale)
+    this.localService.changeLocale(locale)
+  }
+
 }

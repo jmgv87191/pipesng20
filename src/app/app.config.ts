@@ -10,6 +10,7 @@ import localfr  from '@angular/common/locales/fr'
 import { Local } from './services/local';
 
 
+
 registerLocaleData(locales,'es')
 registerLocaleData(localfr,'fr')
 
