@@ -28,7 +28,7 @@ export class Local {
     if (this.isBrowser) {
       localStorage.setItem('locale', locale);
       this.currentLocale.set(locale);
-      window.location.reload(); // También solo disponible en el navegador
+      window.location.reload(); 
     }
   }
 }
