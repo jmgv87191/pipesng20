@@ -85,7 +85,6 @@ export default class UncommonPage {
 
     setTimeout(() => {
       resolve('Tenemos data en la promesa')
-      console.log('promesa finalizada')
     }, 3500);
 
   })
