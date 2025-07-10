@@ -75,13 +75,18 @@
 
           <td> 
 
-            <span>
-              {{ hero.color | heroColor }} 
+            <span class="text-xs w-44" [style.color]=" hero.color | heroTextColor" >
+              {{ hero.color | heroColor | titlecase  }} 
             </span>
 
           </td>
 
-          <td> {{ hero.creator}} </td>
+          <span  
+          [class.text-primary]="hero.creator===0"
+          [class.text-accent]="hero.creator===1"
+          >
+            <td> {{ hero.creator | creador }} </td>
+          </span>
 
         </tr>
       }
